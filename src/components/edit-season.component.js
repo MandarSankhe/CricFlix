@@ -89,7 +89,7 @@ class EditSeason extends Component {
         axios.post('https://cricflix.herokuapp.com/seasons/update/' + this.props.match.params.id, season)
             .then(res => console.log(res.data));
 
-        window.location = '/dashboard';
+        window.location = './dashboard';
     }
 
     render() {
