@@ -21,7 +21,7 @@ function App() {
 
 
                     <Route path="/" exact element={<Home />} />
-                    <Route path="/dashboard" exact element={<Home />} />
+                    <Route path="/dashboard" element={<Home />} />
                     <Route path="/edit/:id" element={<EditSeason />} />
                     <Route path="/create" element={<CreateSeason />} />
                     <Route path="/movie" element={<CreateMovie />} />
