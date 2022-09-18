@@ -30,7 +30,7 @@ class EditSeason extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/seasons/' + this.props.match.params.id)
+        axios.get('https://cricflix.herokuapp.com/seasons/' + this.props.match.params.id)
             .then(response => {
                 this.setState({
                     moviename: response.data.moviename,
@@ -42,7 +42,7 @@ class EditSeason extends Component {
                 console.log(error);
             })
 
-        axios.get('http://localhost:5000/movies/')
+        axios.get('https://cricflix.herokuapp.com/movies/')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -86,7 +86,7 @@ class EditSeason extends Component {
 
         console.log(season);
 
-        axios.post('http://localhost:5000/seasons/update/' + this.props.match.params.id, season)
+        axios.post('https://cricflix.herokuapp.com/seasons/update/' + this.props.match.params.id, season)
             .then(res => console.log(res.data));
 
         window.location = '/dashboard';

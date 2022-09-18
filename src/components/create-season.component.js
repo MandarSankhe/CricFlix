@@ -21,7 +21,7 @@ export default class CreateSeasons extends Component {
         }
     }
     componentDidMount() {
-        axios.get('http://localhost:5000/movies/')
+        axios.get('https://cricflix.herokuapp.com/movies/')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -65,7 +65,7 @@ export default class CreateSeasons extends Component {
 
         console.log(season);
 
-        axios.post('http://localhost:5000/seasons/add', season)
+        axios.post('https://cricflix.herokuapp.com/seasons/add', season)
             .then(res => console.log(res.data));
 
         window.location = '/dashboard';

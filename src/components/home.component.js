@@ -23,7 +23,7 @@ export default class Home extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/seasons/')
+        axios.get('https://cricflix.herokuapp.com/seasons/')
             .then(response => {
                 this.setState({ seasons: response.data })
             })
@@ -33,7 +33,7 @@ export default class Home extends Component {
     }
 
     deleteSeason(id) {
-        axios.delete('http://localhost:5000/seasons/' + id)
+        axios.delete('https://cricflix.herokuapp.com/seasons/' + id)
             .then(response => { console.log(response.data) });
 
         this.setState({
