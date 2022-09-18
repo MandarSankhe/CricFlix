@@ -6,7 +6,7 @@ const Season = props => (
     <tr>
         <td>{props.season.moviename}</td>
         <td>{props.season.seasonno}</td>
-        <td>{props.season.links}</td>
+        <td className="truncate">{props.season.links}</td>
         <td>
             <Link to={"/edit/" + props.season._id}>edit</Link> | <a href="#" onClick={() => { props.deleteSeason(props.season._id) }}>delete</a>
         </td>
