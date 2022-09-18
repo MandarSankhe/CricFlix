@@ -28,6 +28,14 @@
   color: #61dafb;
 }
 
+@media (max-width: 541px) {
+    .truncate {
+        max-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
