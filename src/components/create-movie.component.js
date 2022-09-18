@@ -47,7 +47,7 @@ export default class CreateMovies extends Component {
 
         console.log(movie);
 
-        axios.post('http://localhost:5000/movies/add', movie)
+        axios.post('https://cricflix.herokuapp.com/movies/add', movie)
             .then(res => console.log(res.data));
 
         this.setState({
